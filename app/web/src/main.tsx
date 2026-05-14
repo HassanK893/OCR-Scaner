@@ -6,6 +6,8 @@ import GlobalProvider from './app/provider/GlobalProvider/ui/GlobalProvider.tsx'
 import bridge from '@vkontakte/vk-bridge';
 
 
+
+// иницилизация 
 bridge.send("VKWebAppInit");
 
 createRoot(document.getElementById("root")!).render(

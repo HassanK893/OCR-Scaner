@@ -11,16 +11,24 @@ import "./styles/globals.css";
 import router from "./constants/constants.ts";
 import BaseLayout from "./BaseLayout/BaseLayout.tsx";
 
+import {  useAppearance} from "@vkontakte/vk-bridge-react";
+
+
+
+
+
 export default function App() {
+ const appearance = useAppearance() || "dark"; // 'light' | 'dark' | null 
+
   return (
     <>
-      <ConfigProvider colorScheme="dark" transitionMotionEnabled={false}>
+      <ConfigProvider colorScheme={appearance} transitionMotionEnabled={false}>
         <AdaptivityProvider>
           <AppRoot>
             <RouterProvider router={router}>
               <SplitLayout>
                 <SplitCol>
-                  <BaseLayout />                
+                  <BaseLayout />
                 </SplitCol>
               </SplitLayout>
             </RouterProvider>
