@@ -20,8 +20,7 @@ export default function App() {
             <RouterProvider router={router}>
               <SplitLayout>
                 <SplitCol>
-                  <BaseLayout />
-                 
+                  <BaseLayout />                
                 </SplitCol>
               </SplitLayout>
             </RouterProvider>

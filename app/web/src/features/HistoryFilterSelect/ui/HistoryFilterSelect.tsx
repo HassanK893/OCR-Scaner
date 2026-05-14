@@ -1,9 +1,8 @@
-import React, { useContext,  } from "react";
+import { useContext } from "react";
 import styles from "./HistoryFilterSelect.module.css";
 import CustomSelect from "../../../shared/CustomSelect/ui/CustomSelect";
 import type { Option } from "../../../shared/CustomSelect/model/types";
 import { useIsOpen } from "../model/useIsOpen";
-
 
 import HistoryContext from "../../../app/provider/HistoryProvider/ui/HistoryContext";
 import { documentCategories } from "../model/constants";
@@ -70,28 +69,3 @@ const HistoryFilterSelect = ({ options }: IHistoryFilterSelectProps) => {
 };
 
 export default HistoryFilterSelect;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
