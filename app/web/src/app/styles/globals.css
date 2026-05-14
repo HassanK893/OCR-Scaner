@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   padding-bottom: 80px !important;
+}
+
+
+html, body, #root {
+  min-height: 100%;
+}
+
+
+#root {
+  isolation: isolate;
+}
+
+
+:focus-visible {
+  outline: 2px solid var(--vkui--color_stroke_accent);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+:global(.vkuiPanel) {
+  background: transparent !important;
+}
+
+
+:global(.vkuiPanel__in) {
+  background: transparent !important;
+}

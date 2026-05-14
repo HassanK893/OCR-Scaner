@@ -1,0 +1,94 @@
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 45px 12px 20px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--vkui--color_text_primary);
+}
+
+.sectionLink {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--vkui--color_text_accent);
+  text-decoration: none;
+  position: relative;
+}
+.cardsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 15px;
+  width: 94%;
+  margin-left: 16px;
+  margin-bottom: 20px;
+}
+
+.sectionLink::after {
+  content: ">";
+  position: absolute;
+  left: 28px;
+}
+
+.sectionLink:hover.sectionLink::after {
+  animation: oscillation 2s infinite;
+}
+
+.sectionLink:hover {
+  opacity: 0.7;
+}
+:global(.vkuiPanel) {
+  background: transparent !important;
+}
+
+
+:global(.vkuiPanel__in) {
+  background: transparent !important;
+}
+@media (max-width: 764px) {
+  .greeting {
+    margin-left: 20px;
+  }
+  .greetingConteyner {
+    width: 100%;
+  }
+  .sectionHeader {
+    padding: 12px 20px 12px 0px;
+  }
+  .cardsRow {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding-inline: 0;
+    margin-inline: auto;
+  }
+}
+
+.scanBannerConteyner {
+margin-top: 30px;
+}
+ 
+
+
+@keyframes oscillation {
+  0% {
+    left: 28px;
+  }
+  20% {
+    left: 35px;
+  }
+  40% {
+    left: 28px;
+  }
+  60% {
+    left: 35px;
+  }
+
+  100% {
+    left: 28px;
+  }
+}

@@ -1,0 +1,76 @@
+.greetingConteyner {
+  position: relative;
+  z-index: 1;
+  margin-top: -90px;
+  animation: apeareGreateng 3s 1;
+  width: 95% !important;
+  margin-inline: auto;
+}
+.greetingWave {
+  display: inline-block;
+  animation: wave 1.8s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+
+@media (max-width: 764px) {
+  .greeting {
+    margin-left: 20px;
+  }
+  .greetingConteyner {
+    width: 100%;
+  }
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes apeareGreateng {
+  0% {
+    margin-top: -90px;
+  }
+  20% {
+    margin-top: -0px;
+  }
+  90% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -90px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

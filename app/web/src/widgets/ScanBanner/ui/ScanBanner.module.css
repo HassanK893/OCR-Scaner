@@ -1,0 +1,57 @@
+.scanBanner {
+  background: linear-gradient(135deg, #0077ff 0%, #0059cc 50%, #003d99 100%);
+  border-radius: 16px;
+  padding: 8px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.scanBannerCircle1 {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+.scanBannerCircle2 {
+  position: absolute;
+  bottom: -60%;
+  right: 40%;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.dropzone {
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.07);
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+
+.dropzoneIcon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.dragMenuButton {
+  width: 50%;
+}

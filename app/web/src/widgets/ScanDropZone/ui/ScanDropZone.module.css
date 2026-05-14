@@ -1,0 +1,233 @@
+/* ─── контейнер ──────────────────────────────────────────────────────── */
+.root {
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  border-radius: 16px;
+  color: #fff;
+  background:
+    radial-gradient(120% 90% at 100% 0%, #4f7cf7 0%, transparent 55%),
+    linear-gradient(135deg, #1e4fd6 0%, #1a40b8 55%, #14328f 100%);
+}
+
+/* декоративные круги в правом верхнем углу */
+.decorCircle,
+.decorCircleInner {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.decorCircle {
+  top: -64px;
+  right: -64px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.07);
+}
+.decorCircleInner {
+  top: -24px;
+  right: -24px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── шапка ──────────────────────────────────────────────────────────── */
+.header {
+  position: relative;
+  margin-bottom: 16px;
+}
+.title {
+  color: #fff !important;
+  margin: 0 0 4px;
+}
+.subtitle {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+/* ─── DESKTOP: drag&drop ─────────────────────────────────────────────── */
+.dropZone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  margin-bottom: 12px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+.dropZone:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+.dropZoneActive {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  transform: scale(1.005);
+}
+
+.dropIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.dropText {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.dropHint {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ─── MOBILE: scan zone ──────────────────────────────────────────────── */
+
+/* главная кнопка «Сканировать» — вершина треугольника */
+.scanCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  background: #fff;
+  color: #1a40b8;
+  border: none;
+  border-radius: 14px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  transition: transform 100ms ease, box-shadow 160ms ease;
+}
+.scanCta:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+.scanCtaIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a40b8;
+}
+.scanCtaLabel {
+  line-height: 1;
+}
+
+/* видоискатель — декоративная зона */
+.scanFrame {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* уголки */
+.corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0;
+}
+.cornerTL {
+  top: 14px;
+  left: 14px;
+  border-top-width: 3px;
+  border-left-width: 3px;
+  border-top-left-radius: 6px;
+}
+.cornerTR {
+  top: 14px;
+  right: 14px;
+  border-top-width: 3px;
+  border-right-width: 3px;
+  border-top-right-radius: 6px;
+}
+.cornerBL {
+  bottom: 14px;
+  left: 14px;
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+  border-bottom-left-radius: 6px;
+}
+.cornerBR {
+  bottom: 14px;
+  right: 14px;
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+  border-bottom-right-radius: 6px;
+}
+
+/* анимированная линия сканирования */
+.scanLine {
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.95) 50%,
+    transparent 100%
+  );
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+  animation: scanMove 2.2s ease-in-out infinite;
+}
+@keyframes scanMove {
+  0%,
+  100% {
+    transform: translateY(-38px);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(38px);
+    opacity: 1;
+  }
+}
+
+.scanHint {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* уважение к reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scanLine {
+    animation: none;
+    transform: translateY(0);
+  }
+}

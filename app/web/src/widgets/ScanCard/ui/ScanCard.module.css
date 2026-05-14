@@ -1,0 +1,86 @@
+.scanCardConteyner {
+  width: 100%;
+}
+
+.scanCard {
+  border: solid 1px;
+  border-color: rgba(117, 116, 116, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cardPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cardInfo {
+  padding: 12px 16px;
+  min-width: 0; /* чтобы ellipsis работал внутри flex */
+}
+
+.typeBadge {
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* ===== Режим "список" (полоска, картинка слева) ===== */
+.cardInnerList {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.cardPreviewList {
+  width: 72px;
+  min-height: 64px;
+  flex-shrink: 0;
+}
+
+.cardInnerList .cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.typeBadgeList {
+  position: static;
+  align-self: flex-start;
+  margin-bottom: 4px;
+}
+
+/* В режиме списка большую иконку документа скрываем — она не нужна */
+.cardPreviewList svg {
+  display: none;
+}
+
+/* ===== Режим "сетка" (плитка, картинка сверху) ===== */
+.cardInnerGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardPreviewGrid {
+  height: 120px;
+}
+
+.cardInnerGrid .typeBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.cardInnerGrid .cardInfo {
+  padding: 12px 16px;
+}

@@ -1,0 +1,31 @@
+.logoContyner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 8px;
+}
+
+.logoText {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--vkui--color_accent_blue);
+}
+
+.mobileLogoWrapper {
+  position: absolute;
+  left: 50%;
+  top:20%;
+  transform: translateX(-50%);
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+@media (max-width: 765px) {
+  .logoContyner {
+    padding-left: 0;
+  }
+}

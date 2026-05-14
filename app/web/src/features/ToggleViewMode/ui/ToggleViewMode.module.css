@@ -1,0 +1,20 @@
+.viewToggle {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.viewIcon {
+  color: var(--vkui--color_icon_tertiary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.viewIcon:hover {
+  color: var(--vkui--color_icon_secondary);
+}
+
+.viewIconActive {
+  color: var(--vkui--color_accent);
+  cursor: pointer;
+}

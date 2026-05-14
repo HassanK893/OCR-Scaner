@@ -1,0 +1,32 @@
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px 16px 10px;
+}
+
+.statCard {
+  flex: 1;
+  background: var(--vkui--color_background_content);
+  border-radius: 14px;
+  padding: 14px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px var(--vkui--color_shadow_alpha);
+}
+
+.statNumber {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--vkui--color_text_primary);
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vkui--color_text_secondary);
+  text-align: center;
+}

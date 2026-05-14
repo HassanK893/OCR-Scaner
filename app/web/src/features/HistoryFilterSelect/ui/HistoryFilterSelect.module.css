@@ -1,0 +1,16 @@
+.filterRow {
+  display: flex;
+  gap: 8px;
+  padding-inline: 10px
+}
+
+.filterRow > * {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .filterRow {
+    flex-direction: column;
+  }
+}

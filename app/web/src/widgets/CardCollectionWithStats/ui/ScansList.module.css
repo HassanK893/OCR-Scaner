@@ -1,0 +1,45 @@
+
+.cardsListVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 10px;
+  width: 97%;
+}
+
+.cardsGridHorizontal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 12px;
+  padding-left: 10px;
+  
+
+  width: 97%;
+}
+@media (max-width: 900px) {
+  .cardsGridHorizontal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 колонка на узких экранах */
+@media (max-width: 560px) {
+  .cardsGridHorizontal {
+    grid-template-columns: 1fr;
+  }
+  
+  .cardsListVertical,
+  .cardsGridHorizontal {
+    padding: 0 12px 20px 12px;
+  }
+}
+
+
+@media (max-width: 765px) {
+
+ 
+ 
+ 
+ 
+
+}

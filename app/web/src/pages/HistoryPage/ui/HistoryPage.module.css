@@ -1,0 +1,25 @@
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 16px 14px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vkui--color_text_secondary);
+}
+
+
+.resultsCount {
+  font-weight: 500;
+}
+
+
+.sortLabel {
+  font-weight: 500;
+}
+
+@media (max-width: 765px) {
+  .listHeader {
+    padding: 4px 12px 12px 12px;
+    font-size: 12px;
+  }
+}
