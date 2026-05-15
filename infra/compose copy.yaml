@@ -32,6 +32,29 @@ services:
     depends_on:
       - postgres
 
+  # ai-worker:
+  #   build:
+  #     context: ../app/ai-worker
+    
+  #   environment:
+  #     DB_HOST: postgres
+  #     DB_PORT: ${DB_PORT}
+  #     DB_USER: ${POSTGRES_USER}
+  #     DB_PASSWORD: ${POSTGRES_PASSWORD}
+  #     DB_NAME: ${POSTGRES_DB}
+  #     MINIO_ENDPOINT: minio:9000
+  #     MINIO_ACCESS_KEY: ${MINIO_USER}
+  #     MINIO_BUCKET: resumes
+
+
+    # networks:
+    #   - private
+
+    # depends_on:
+    #   - postgres
+    #   - redis
+    #   - minio
+    
 
   minio:
     image: minio/minio:latest
@@ -63,7 +86,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql
     ports:
-      - "127.0.0.1:5434:5432"
+      - "127.0.0.1:5433:5432"
     
   redis:
     image: redis:7
@@ -76,7 +99,7 @@ services:
 
 networks:
   private: 
-  #  internal: true
+   internal: true
 
 
 
